@@ -15,17 +15,6 @@ df.describe()
 corr=df.corr()
 df.corr()
 plt.figure(figsize=(10, 6))
-
-# Plot the correlation matrix using imshow
-plt.imshow(corr, cmap='RdBu', interpolation='nearest')
-plt.colorbar()
-
-# Set axis labels and title
-plt.xticks(range(len(corr.columns)), corr.columns, rotation=90)
-plt.yticks(range(len(corr.columns)), corr.columns)
-plt.title('Correlation Matrix')
-
-# Show the plot
 plt.show()
 model.fit(df[['area','bedrooms','age']],df.price)
 model.predict([[2500,4,5]])
